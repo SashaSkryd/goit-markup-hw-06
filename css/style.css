@@ -165,6 +165,7 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  outline: none;
 }
 .text-btn {
   font-weight: 700;
@@ -619,10 +620,23 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   box-sizing: border-box;
+  outline-color: none;
 }
+.btn-backdrop:focus,
+.btn-backdrop:hover {
+  color: var(--accent-color);
+}
+/* .btn-backdrop:hover ~ .icon-backdrop,
+.btn-backdrop:focus ~ .icon-backdrop {
+  fill: currentColor;
+} */
 .icon-backdrop {
   width: 11px;
   height: 11px;
+}
+.icon-backdrop:hover,
+.icon-backdrop:focus {
+  fill: currentColor;
 }
 .modal-title {
   font-weight: 700;
@@ -642,7 +656,6 @@ button {
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.01em;
-
 }
 .modal-input {
   width: 100%;
@@ -651,7 +664,15 @@ button {
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
- 
+  outline: none;
+}
+.modal-input:focus,
+.modal-input:hover {
+  border-color: var(--accent-color);
+}
+.modal-input:focus ~ .icon-modal,
+.modal-input:hover ~ .icon-modal {
+  fill: var(--accent-color);
 }
 .modal-text {
   width: 100%;
@@ -661,6 +682,11 @@ button {
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
+  outline: none;
+}
+.modal-text:focus,
+.modal-text:hover {
+  border-color: var(--accent-color);
 }
 .modal-link {
   font-weight: 400;
@@ -669,23 +695,58 @@ button {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-.checkbox {
-  
+.input-chekbox:focus ~ .modal-link,
+.input-chekbox:hover ~ .modal-link {
+  color: var(--accent-color);
 }
-.modal-end-block {
-  padding-bottom: 40px;
+.checkbox {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.input-checkbox:checked + .checkbox::before {
+  background-color: var(--accent-color);
+}
+.checkbox::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  background-color: var(--primary-white-color);
+  border: 1px solid #2196F3;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+.icon-checkbox {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  fill: var(--primary-white-color);
+}
+.is-hiden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 .icon-modal {
   position: absolute;
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  
 }
 .modal-box {
   position: relative;
   margin-bottom: 28px;
   margin-left: 41px;
   margin-right: 39px;
-
+}
+.modal-end-block {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }

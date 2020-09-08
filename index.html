@@ -408,11 +408,18 @@
         </svg></div>
         
         
-        <div class="modal-box"><label for="modal-text" class="modal-label">Комментарий</label>
+        <div class="modal-box"><label for="modal-text" class="modal-label checbox-label">Комментарий</label>
         <textarea name="modal-text" id="modal-text" class="modal-text" placeholder="Введите текст"></textarea></div>
-
-        <label for="checkbox" class="checkbox"><input type="checkbox" id="checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="modal-link">Условия договора</a></label>
-        <div class="modal-end-block"><button type="submit" class="hero-btn"> <span class="text-btn">Отправить</span></button>
+          <div class="modal-box">
+            <input type="checkbox" id="checkbox" class="input-checkbox is-hiden">
+            <label for="checkbox" class="checkbox">
+            <span>
+           <svg class="icon-checkbox" width="11" height="8">
+             <use href="./svg/sprite.svg#icon-acept"></use>
+           </svg> 
+           Соглашаюсь с рассылкой и принимаю <a href="" class="modal-link">Условия договора</a></span>  
+            </label></div>
+        <div class="modal-end-block"><button type="submit" class="hero-btn "> <span class="text-btn">Отправить</span></button>
         </div>
         </form>
       </div>
