@@ -370,6 +370,14 @@
             </li>
           </ul>
         </div>
+        <div class="mailing">
+          <h2 class="footer-list-title">Подпишитесь на рассылку</h2>
+          <textarea name="mailing-mesage" class="mailing-mesage" placeholder="E-mail"></textarea>
+          </div>
+          <div class="mailing-btn"><button type="submit" class="hero-btn position-footer-btn"><span class="text-btn">Подписаться</span>
+            <svg class="icon-footer-btn">
+              <use href="./svg/sprite.svg#icon-leter-footer"></use>
+            </svg></button></div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -377,6 +385,17 @@
         <button type="button" class="btn-backdrop" data-modal-close><svg class="icon-backdrop">
           <use href="./svg/sprite.svg#icon-close"></use>
         </svg></button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <label for="name" class="modal-label">Имя</label>
+        <input type="name" id="name" class="modal-input">
+        <label for="phone" class="modal-label">Телефон</label>
+        <input type="phone" id="phone" class="modal-input">
+        <label for="email" class="modal-label">Почта</label>
+        <input type="email" id="email" class="modal-input">
+        <label for="modal-text" class="modal-label">Комментарий</label>
+        <textarea name="modal-text" id="modal-text" class="modal-text" placeholder="Введите текст"></textarea>
+        <label for="checkbox"><input type="checkbox" id="checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="link modal-link">Условия договора</a></label>
+        <button type="submit" class="hero-btn"> <span class="text-btn">Отправить</span></button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
